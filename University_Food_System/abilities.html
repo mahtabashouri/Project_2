@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="src/css/abilities.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> فرم شناسایی توانمندی های دانشجویی</title>
+
+</head>
+<body>
+<!-- قسمت منو -->
+<div class="ma-top">
+    <div class="ma-bar ma-theme-d2 ma-left-align">
+
+        <!-- دکمه باز کردن منو در صفحات کوچکتر -->
+        <a class="ma-bar-item ma-button ma-hide-medium ma-hide-large ma-right ma-hover-white ma-theme-d2"
+           href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+
+        <!-- گزینه اصلی "صفحه اول" با آیکون -->
+        <a href="index.html" class="ma-bar-item ma-button ma-teal"><i class="fa fa-home ma-margin-right"></i> صفحه نخست</a>
+
+        <!-- منوی کشویی برای "گزارشات سامانه" -->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <button class="ma-button">گزارشات سامانه <i class="fa fa-caret-down"></i></button>
+            <div class="ma-dropdown-content ma-card-4 ma-bar-block">
+                <a href="index.html" class="ma-bar-item ma-button">گزارش کاربر سامانه تغذیه</a>
+                <a href="#" class="ma-bar-item ma-button">گزارش اعتبار فرستاده شده</a>
+                <a href="#" class="ma-bar-item ma-button">گزارش اعتبار دریافتی</a>
+                <a href="report.html" class="ma-bar-item ma-button">گزارش عملکرد</a>
+            </div>
+        </div>
+        <!-- این بخش کد یک منوی کشویی را ایجاد می‌کند که مرتبط با سامانه تغذیه است -->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <!-- دکمه‌ای که برای نمایش منو کشویی استفاده می‌شود -->
+            <button class="ma-button">سامانه تغذیه <i class="fa fa-caret-down"></i></button>
+
+            <!-- محتوای منو کشویی -->
+            <div class="ma-dropdown-content ma-card-4 ma-bar-block">
+                <!-- گزینه‌های مختلف که کاربر می‌تواند انتخاب کند -->
+                <a href="index.html" class="ma-bar-item ma-button">عملیات کاربر سامانه</a>
+                <a href="foodReservation.html" class="ma-bar-item ma-button">رزرو غذا</a>
+                <a href="creditIncrease.html" class="ma-bar-item ma-button">افزایش اعتبار</a>
+                <a href="creditTransfer.html" class="ma-bar-item ma-button">انتقال اعتبار</a>
+                <a href="#" class="ma-bar-item ma-button">فراموشی کارت</a>
+                <a href="resetSecondPass.html" class="ma-bar-item ma-button">تغییر رمز دوم</a>
+                <a href="#" class="ma-bar-item ma-button">قفل نمودن کارت</a>
+            </div>
+        </div>
+
+        <!-- این قسمت کد یک منوی کشویی را برای انتخاب عملیات دانشجو ایجاد می‌کند -->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <!-- دکمه‌ای که با کلیک بر روی آن، منوی کشویی نمایش داده می‌شود -->
+            <button class="ma-button">عملیات دانشجو <i class="fa fa-caret-down"></i></button>
+
+            <!-- محتوای منوی کشویی که باز می‌شود -->
+            <div class="ma-dropdown-content ma-card-4 ma-bar-block">
+                <!-- گزینه‌های مختلف که کاربر می‌تواند انتخاب کند -->
+                <a href="profileDisplay.html" class="ma-bar-item ma-button">نمایش پروفایل</a>
+                <a href="suggestions.html" class="ma-bar-item ma-button">ارسال پیشنهادات</a>
+                <a href="abilities.html" class="ma-bar-item ma-button">توانمندی‌های فرهنگی</a>
+                <a href="#" class="ma-bar-item ma-button">اطلاعات خویشاوندان</a>
+            </div>
+        </div>
+        <!-- این بخش کد یک منوی کشویی برای انجام تبادل پیام‌ها را ایجاد می‌کند -->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <!-- دکمه‌ای که با کلیک بر روی آن، منوی کشویی نمایش داده می‌شود -->
+            <button class="ma-button">تبادل پیام <i class="fa fa-caret-down"></i></button>
+
+            <!-- محتوای منوی کشویی که باز می‌شود -->
+            <div class="ma-dropdown-content ma-card-4 ma-bar-block">
+                <!-- گزینه‌های مختلف که کاربر می‌تواند انتخاب کند -->
+                <a href="sendingMessage.html" class="ma-bar-item ma-button">ارسال پیام</a>
+                <a href="inbox.html" class="ma-bar-item ma-button">پیام های دریافتی</a>
+                <a href="sentMessages.html" class="ma-bar-item ma-button">پیام های ارسالی</a>
+                <a href="#" class="ma-bar-item ma-button">مکالمات</a>
+                <a href="#" class="ma-bar-item ma-button">برچسب ها</a>
+            </div>
+        </div>
+        <!--  files settings dropdown menu-->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <!--  files settings dropdown menu button-->
+            <button class="ma-button">تنظیمات پرونده ها <i class="fa fa-caret-down"></i></button>
+
+            <!--  files settings dropdown menu content-->
+            <div class="ma-dropdown-content ma-card-4 ma-bar-block">
+                <a href="resetPassword.html" class="ma-bar-item ma-button"> تغییر کلمه عبور</a>
+            </div>
+        </div>
+
+        <!--  profile dropdown menu-->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <!--  profile dropdown menu button-->
+
+            <a href="login.html">
+                <button class="ma-button">خروج</button>
+            </a>
+        </div>
+
+        <!--    search icon in header  -->
+        <a href="#" class="ma-bar-item ma-button ma-hide-small ma-right ma-hover-teal" title="جست و جو">
+            <i class="fa fa-search"></i>
+        </a>
+
+    </div>
+
+
+</div>
+<div style="margin-top: 40px;">
+
+    <i>
+        <h6> فرم شناسایی توانمندیهای دانشجویی</h6>
+    </i>
+    <div class="tab1">
+        <table>
+            <tr>
+                <th> توانایی های مذهبی - اعتقادی</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+
+            </tr>
+            <tr>
+                <td> قرآن و نهج البلاغه</td>
+
+                <td><input type="checkbox" class="checkbox"> حافظ</td>
+                <td><input type="checkbox" class="checkbox">قاری</td>
+                <td></td>
+                <td><input type="text" class="textbox" placeholder="توضیحات"></td>
+            </tr>
+            <tr>
+                <td> مداحی</td>
+                <td><input type="checkbox" class="checkbox">مولودی خوانی</td>
+                <td><input type="checkbox" class="checkbox">ادعیه خوانی</td>
+                <td><input type="checkbox" class="checkbox">روضه خوانی</td>
+                <td><input type="text" class="textbox" placeholder="توضیحات "></td>
+            </tr>
+        </table>
+    </div>
+    <div class="tab2">
+
+        <table>
+            <thead>
+            <tr>
+                <th style="text-align: center">توانایی های هنری</th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="checkbox" class="checkbox">خطاطی</td>
+                <td><input type="text" class="textbox" placeholder="نوع خط "></td>
+                <td><input type="text" class="textbox" placeholder="سطح  "></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox">صنایع دستی</td>
+                <td><input type="text" class="textbox" placeholder=" توضیحات "></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox">نقاشی</td>
+                <td><input type="text" class="textbox" placeholder=" ابزار "></td>
+                <td><input type="text" class="textbox" placeholder=" سطح "></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox">عکاسی</td>
+                <td><input type="text" class="textbox" placeholder=" نوع دوربین "></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox">موسیقی</td>
+                <td><input type="text" class="textbox" placeholder=" ابزار  "></td>
+                <td><input type="text" class="textbox" placeholder=" سطح  "></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox">کاریکاتور</td>
+                <td><input type="text" class="textbox" placeholder=" توضیخات  "></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tab3">
+        <table>
+            <thead>
+            <tr>
+                <th>توانایی های ادبی</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="checkbox" class="checkbox">داستان نویسی</td>
+
+                <td></td>
+                <td><input type="text" class="textbox" placeholder=" سبک  "></td>
+
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox">شعر</td>
+                <td><input type="checkbox" class="checkbox">سرودن</td>
+                <td><input type="checkbox" class="checkbox">مشاعره</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td><input type="text" class="textbox" placeholder=" نشریه  "></td>
+                <td><input type="checkbox" class="checkbox">علمی</td>
+                <td><input type="checkbox" class="checkbox">سیاسی</td>
+                <td><input type="checkbox" class="checkbox">اجتماعی</td>
+                <td><input type="checkbox" class="checkbox">مذهبی-عقیدتی</td>
+
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox">مقاله نویسی</td>
+                <td></td>
+                <td><input type="text" class="textbox" placeholder=" توضیحات  "></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox">وبلاگ</td>
+                <td><input type="text" class="textbox" placeholder=" آدرس وبلاگ  "></td>
+                <td><input type="text" class="textbox" placeholder="  توضیحات  "></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tab5">
+        <table>
+            <thead>
+            <tr>
+
+                <th> توانایی های ورزشی</th>
+
+            </tr>
+            </thead>
+            <tr>
+                <td>
+        <textarea placeholder="رشته های ورزشی که انجام داده اید و سطوح فعالیت خود در آنها را بیان کنید
+        "></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tab6">
+        <table>
+            <thead>
+            <tr>
+                <th>
+                    اگر عضو تیم معتبری هستید یا مقامی در این رشته کسب کرده اید بیان کنید.
+                </th>
+
+            </tr>
+            </thead>
+            <tr>
+                <td>
+        <textarea placeholder="
+توضیحات        "></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tab8">
+        <table>
+            <tr>
+                <th></th>
+                <th> با توجه به اینكه انجام بخشی از فعالیت های مختلف فرهنگی اجرایی معاونت دانشجویی و فرهنگی همه ساله به
+                    وسیله دانشجویان برنامه ریزی و اجرا می گردد، خواهشمند است علاقه مندی خود را جهت همكاری مشخص نمائید.
+                </th>
+                <th></th>
+
+
+            </tr>
+            <tr>
+                <td><label>
+                    <input type="checkbox" class="checkbox">
+                </label>واحد تربیت بدنی
+                </td>
+                <td><label>
+                    <input type="checkbox" class="checkbox">
+                </label> کتابخانه، سی دی کلوپ
+                </td>
+                <td><label>
+                    <input type="checkbox" class="checkbox">
+                </label>تغذیه
+                </td>
+
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox">واحد تبلیغات</td>
+                <td><input type="checkbox" class="checkbox"> واحد تأسیسات</td>
+                <td><input type="checkbox" class="checkbox">مدیریت</td>
+
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox">واحد اردویی</td>
+                <td><input type="checkbox" class="checkbox">سایت و امور رایانه</td>
+                <td><input type="hidden"></td>
+
+            </tr>
+
+        </table>
+
+    </div>
+    <div class="tab9">
+        <table>
+            <thead>
+            <tr>
+                <th>
+                    اگر دارای موفقیت های علمی یا کسب مقام در مسابقات و یا ثبت اختراع دارید، ذکر فرمائید.
+                </th>
+
+            </tr>
+            </thead>
+
+            <tr>
+                <td>
+    <textarea placeholder="
+توضیخات        "></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tab10">
+        <table>
+            <thead>
+            <tr>
+                <th>
+                    نام مجلات و روزنامه هایی که علاقمند به مطالعه آن هستید را ذکر کنید.
+
+                </th>
+
+            </tr>
+            </thead>
+            <tr>
+                <td>
+        <textarea placeholder="
+توضیحات        "></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tab10">
+        <table>
+            <thead>
+            <tr>
+                <th>
+                    چند مورد از بهترین فیلم هایی را که تا به حال دیده اید را نام ببرید : (نام فیلم و کارگردان)
+
+                </th>
+
+            </tr>
+            </thead>
+            <tr>
+                <td>
+        <textarea placeholder="
+        
+توضیحات
+        "></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tab100">
+        <table>
+            <thead>
+            <tr>
+                <th>
+                    کتب مورد علاقه شما معمولاً در چه زمینه هایی است؟
+                </th>
+
+            </tr>
+            </thead>
+            <tr>
+                <td>
+                    <input type="text" class="textbox" placeholder=" توضیخات  ">
+
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tab12">
+        <table>
+
+            <tr>
+                <td>
+        <textarea placeholder="
+        نام چند کتاب را بیان نمائید :
+        "></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tab11">
+        <table>
+            <tr>
+
+                <th> تجربه فعالیت های فوق برنامه شما در چه مجموعه هایی بوده است؟</th>
+                <th></th>
+
+
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox"> انجمن اسلامی</td>
+                <td><input type="checkbox" class="checkbox">شورای مدرسه</td>
+
+
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox">بسیج دانش آموزی</td>
+                <td><input type="checkbox" class="checkbox">پایگاه بسیج محله</td>
+
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox">هیأت مذهبی</td>
+                <td><input type="checkbox" class="checkbox"> مؤسسات فرهنگی هنری</td>
+
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox"> فرهنگسرا</td>
+                <td><input type="checkbox" class="checkbox">NGOها</td>
+
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox">کانون های فرهنگی مساجد</td>
+                <td></td>
+
+            </tr>
+
+
+        </table>
+
+    </div>
+    <div class="tab12">
+        <table>
+            <thead>
+            <tr>
+                <th></th>
+
+            </tr>
+            </thead>
+            <tr>
+                <td>
+                    <textarea placeholder="توضیحات"></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="containerBu">
+        <button class="button">ذخیره</button>
+
+        <a href="index.html">
+            <button class="button">بازگشت</button>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

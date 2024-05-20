@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta CHARSET="UTF-8">
+    <link rel="stylesheet" href="src/css/suggestions.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>صفحه پیشنهادات و انتقادات</title>
+</head>
+<body>
+
+<!-- قسمت منو -->
+<div class="ma-top">
+    <div class="ma-bar ma-theme-d2 ma-left-align">
+
+        <!-- دکمه باز کردن منو در صفحات کوچکتر -->
+        <a class="ma-bar-item ma-button ma-hide-medium ma-hide-large ma-right ma-hover-white ma-theme-d2"
+           href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+
+        <!-- گزینه اصلی "صفحه اول" با آیکون -->
+        <a href="index.html" class="ma-bar-item ma-button ma-teal"><i class="fa fa-home ma-margin-right"></i> صفحه نخست</a>
+
+        <!-- منوی کشویی برای "گزارشات سامانه" -->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <button class="ma-button">گزارشات سامانه <i class="fa fa-caret-down"></i></button>
+            <div class="ma-dropdown-content ma-card-4 ma-bar-block">
+                <a href="index.html" class="ma-bar-item ma-button">گزارش کاربر سامانه تغذیه</a>
+                <a href="#" class="ma-bar-item ma-button">گزارش اعتبار فرستاده شده</a>
+                <a href="#" class="ma-bar-item ma-button">گزارش اعتبار دریافتی</a>
+                <a href="report.html" class="ma-bar-item ma-button">گزارش عملکرد</a>
+            </div>
+        </div>
+        <!-- این بخش کد یک منوی کشویی را ایجاد می‌کند که مرتبط با سامانه تغذیه است -->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <!-- دکمه‌ای که برای نمایش منو کشویی استفاده می‌شود -->
+            <button class="ma-button">سامانه تغذیه <i class="fa fa-caret-down"></i></button>
+
+            <!-- محتوای منو کشویی -->
+            <div class="ma-dropdown-content ma-card-4 ma-bar-block">
+                <!-- گزینه‌های مختلف که کاربر می‌تواند انتخاب کند -->
+                <a href="index.html" class="ma-bar-item ma-button">عملیات کاربر سامانه</a>
+                <a href="foodReservation.html" class="ma-bar-item ma-button">رزرو غذا</a>
+                <a href="creditIncrease.html" class="ma-bar-item ma-button">افزایش اعتبار</a>
+                <a href="creditTransfer.html" class="ma-bar-item ma-button">انتقال اعتبار</a>
+                <a href="#" class="ma-bar-item ma-button">فراموشی کارت</a>
+                <a href="resetSecondPass.html" class="ma-bar-item ma-button">تغییر رمز دوم</a>
+                <a href="#" class="ma-bar-item ma-button">قفل نمودن کارت</a>
+            </div>
+        </div>
+
+        <!-- این قسمت کد یک منوی کشویی را برای انتخاب عملیات دانشجو ایجاد می‌کند -->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <!-- دکمه‌ای که با کلیک بر روی آن، منوی کشویی نمایش داده می‌شود -->
+            <button class="ma-button">عملیات دانشجو <i class="fa fa-caret-down"></i></button>
+
+            <!-- محتوای منوی کشویی که باز می‌شود -->
+            <div class="ma-dropdown-content ma-card-4 ma-bar-block">
+                <!-- گزینه‌های مختلف که کاربر می‌تواند انتخاب کند -->
+                <a href="profileDisplay.html" class="ma-bar-item ma-button">نمایش پروفایل</a>
+                <a href="suggestions.html" class="ma-bar-item ma-button">ارسال پیشنهادات</a>
+                <a href="abilities.html" class="ma-bar-item ma-button">توانمندی‌های فرهنگی</a>
+                <a href="#" class="ma-bar-item ma-button">اطلاعات خویشاوندان</a>
+            </div>
+        </div>
+        <!-- این بخش کد یک منوی کشویی برای انجام تبادل پیام‌ها را ایجاد می‌کند -->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <!-- دکمه‌ای که با کلیک بر روی آن، منوی کشویی نمایش داده می‌شود -->
+            <button class="ma-button">تبادل پیام <i class="fa fa-caret-down"></i></button>
+
+            <!-- محتوای منوی کشویی که باز می‌شود -->
+            <div class="ma-dropdown-content ma-card-4 ma-bar-block">
+                <!-- گزینه‌های مختلف که کاربر می‌تواند انتخاب کند -->
+                <a href="sendingMessage.html" class="ma-bar-item ma-button">ارسال پیام</a>
+                <a href="inbox.html" class="ma-bar-item ma-button">پیام های دریافتی</a>
+                <a href="sentMessages.html" class="ma-bar-item ma-button">پیام های ارسالی</a>
+                <a href="#" class="ma-bar-item ma-button">مکالمات</a>
+                <a href="#" class="ma-bar-item ma-button">برچسب ها</a>
+            </div>
+        </div>
+        <!--  files settings dropdown menu-->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <!--  files settings dropdown menu button-->
+            <button class="ma-button">تنظیمات پرونده ها <i class="fa fa-caret-down"></i></button>
+
+            <!--  files settings dropdown menu content-->
+            <div class="ma-dropdown-content ma-card-4 ma-bar-block">
+                <a href="resetPassword.html" class="ma-bar-item ma-button"> تغییر کلمه عبور</a>
+            </div>
+        </div>
+
+        <!--  profile dropdown menu-->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <!--  profile dropdown menu button-->
+
+            <a href="login.html">
+                <button class="ma-button">خروج</button>
+            </a>
+        </div>
+
+        <!--    search icon in header  -->
+        <a href="#" class="ma-bar-item ma-button ma-hide-small ma-right ma-hover-teal" title="جست و جو">
+            <i class="fa fa-search"></i>
+        </a>
+
+    </div>
+
+
+</div>
+
+<div class="containers">
+    <h3>پیشنهادات و انتقادات</h3>
+
+    <div class="form-group">
+        <label>معرفی :</label>
+        <input type="text" placeholder="نام و نام خانوادگی خود را وارد کنید">
+    </div>
+
+    <div class="form-group">
+        <label>عنوان :</label>
+        <input type="text" placeholder="عنوان را وارد کنید">
+    </div>
+
+    <div class="form-group">
+        <label>نوع :</label>
+        <select>
+            <option value="">---</option>
+            <option>پیشنهاد</option>
+            <option>انتقاد</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>شرح موضوع :</label>
+        <textarea rows="5" placeholder="موضوع خود را شرح دهید"></textarea>
+    </div>
+
+    <div class="btn-group">
+        <button type="button">ذخیره</button>
+        <a href="index.html">
+            <button type="button">بازگشت</button>
+        </a>
+    </div>
+</div>
+</body>
+</html>

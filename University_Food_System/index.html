@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <title>سامانه تغذیه دانشگاه گیلان</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<!-- اینجا شروع بدنه صفحه است -->
+<body>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
+
+
+<!-- قسمت منو -->
+<div class="ma-top">
+    <div class="ma-bar ma-theme-d2 ma-left-align">
+
+        <!-- دکمه باز کردن منو در صفحات کوچکتر -->
+        <a class="ma-bar-item ma-button ma-hide-medium ma-hide-large ma-right ma-hover-white ma-theme-d2"
+           href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+
+        <!-- گزینه اصلی "صفحه اول" با آیکون -->
+        <a href="#" class="ma-bar-item ma-button ma-teal"><i class="fa fa-home ma-margin-right"></i> صفحه نخست</a>
+
+        <!-- منوی کشویی برای "گزارشات سامانه" -->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <button class="ma-button">گزارشات سامانه <i class="fa fa-caret-down"></i></button>
+            <div class="ma-dropdown-content ma-card-4 ma-bar-block">
+                <a href="index.html" class="ma-bar-item ma-button">گزارش کاربر سامانه تغذیه</a>
+                <a href="#" class="ma-bar-item ma-button">گزارش اعتبار فرستاده شده</a>
+                <a href="#" class="ma-bar-item ma-button">گزارش اعتبار دریافتی</a>
+                <a href="report.html" class="ma-bar-item ma-button">گزارش عملکرد</a>
+            </div>
+        </div>
+        <!-- این بخش کد یک منوی کشویی را ایجاد می‌کند که مرتبط با سامانه تغذیه است -->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <!-- دکمه‌ای که برای نمایش منو کشویی استفاده می‌شود -->
+            <button class="ma-button">سامانه تغذیه <i class="fa fa-caret-down"></i></button>
+
+            <!-- محتوای منو کشویی -->
+            <div class="ma-dropdown-content ma-card-4 ma-bar-block">
+                <!-- گزینه‌های مختلف که کاربر می‌تواند انتخاب کند -->
+                <a href="index.html" class="ma-bar-item ma-button">عملیات کاربر سامانه</a>
+                <a href="foodReservation.html" class="ma-bar-item ma-button">رزرو غذا</a>
+                <a href="creditIncrease.html" class="ma-bar-item ma-button">افزایش اعتبار</a>
+                <a href="creditTransfer.html" class="ma-bar-item ma-button">انتقال اعتبار</a>
+                <a href="#" class="ma-bar-item ma-button">فراموشی کارت</a>
+                <a href="resetSecondPass.html" class="ma-bar-item ma-button">تغییر رمز دوم</a>
+                <a href="#" class="ma-bar-item ma-button">قفل نمودن کارت</a>
+            </div>
+        </div>
+
+        <!-- این قسمت کد یک منوی کشویی را برای انتخاب عملیات دانشجو ایجاد می‌کند -->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <!-- دکمه‌ای که با کلیک بر روی آن، منوی کشویی نمایش داده می‌شود -->
+            <button class="ma-button">عملیات دانشجو <i class="fa fa-caret-down"></i></button>
+
+            <!-- محتوای منوی کشویی که باز می‌شود -->
+            <div class="ma-dropdown-content ma-card-4 ma-bar-block">
+                <!-- گزینه‌های مختلف که کاربر می‌تواند انتخاب کند -->
+                <a href="profileDisplay.html" class="ma-bar-item ma-button">نمایش پروفایل</a>
+                <a href="suggestions.html" class="ma-bar-item ma-button">ارسال پیشنهادات</a>
+                <a href="abilities.html" class="ma-bar-item ma-button">توانمندی‌های فرهنگی</a>
+                <a href="#" class="ma-bar-item ma-button">اطلاعات خویشاوندان</a>
+            </div>
+        </div>
+        <!-- این بخش کد یک منوی کشویی برای انجام تبادل پیام‌ها را ایجاد می‌کند -->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <!-- دکمه‌ای که با کلیک بر روی آن، منوی کشویی نمایش داده می‌شود -->
+            <button class="ma-button">تبادل پیام <i class="fa fa-caret-down"></i></button>
+
+            <!-- محتوای منوی کشویی که باز می‌شود -->
+            <div class="ma-dropdown-content ma-card-4 ma-bar-block">
+                <!-- گزینه‌های مختلف که کاربر می‌تواند انتخاب کند -->
+                <a href="sendingMessage.html" class="ma-bar-item ma-button">ارسال پیام</a>
+                <a href="inbox.html" class="ma-bar-item ma-button">پیام های دریافتی</a>
+                <a href="sentMessages.html" class="ma-bar-item ma-button">پیام های ارسالی</a>
+                <a href="#" class="ma-bar-item ma-button">مکالمات</a>
+                <a href="#" class="ma-bar-item ma-button">برچسب ها</a>
+            </div>
+        </div>
+        <!--  files settings dropdown menu-->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <!--  files settings dropdown menu button-->
+            <button class="ma-button">تنظیمات پرونده ها <i class="fa fa-caret-down"></i></button>
+
+            <!--  files settings dropdown menu content-->
+            <div class="ma-dropdown-content ma-card-4 ma-bar-block">
+                <a href="resetPassword.html" class="ma-bar-item ma-button"> تغییر کلمه عبور</a>
+            </div>
+        </div>
+
+        <!--  profile dropdown menu-->
+        <div class="ma-dropdown-hover ma-hide-small">
+            <!--  profile dropdown menu button-->
+
+            <a href="login.html">
+                <button class="ma-button">خروج</button>
+            </a>
+        </div>
+
+        <!--    search icon in header  -->
+        <a href="#" class="ma-bar-item ma-button ma-hide-small ma-right ma-hover-teal" title="جست و جو">
+            <i class="fa fa-search"></i>
+        </a>
+
+    </div>
+
+
+</div>
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+<!--banner-->
+<div class="ma-display-container ma-animate-opacity">
+    <!-- banner image -->
+    <img src="src/img/banner.jpg" alt="boat" style="width:100%;height: 520px;">
+    <div class="ma-container ma-display-bottomleft ma-margin-bottom">
+    </div>
+</div>
+
+
+<!-- --------------------------------------------------------------------------------------------------------- -->
+<!-- شروع بخش امور خوابگاه -->
+<div class="ma-container ma-padding-64 ma-center" id="team">
+    <!-- عنوان بخش -->
+    <h2 style="margin-top: -40px"><b>امور خوابگاه</b></h2>
+    <!-- متن توضیحی برای بخش -->
+    <p>در این قسمت، اطلاعات مربوط به خدمات و امور مرتبط با خوابگاه قرار دارد.</p>
+
+
+    <!-- شروع زیر بخش های  اطلاعات بستانکاری -->
+    <div class="ma-quarter">
+        <!-- عکس -->
+        <img src="src/img/pishsabt.png" alt="Boss" style="width:45%" class="ma-circle ma-hover-opacity">
+        <!-- عنوان -->
+        <h3><a href="#" class="transition-link" style="text-align: center">بستانکاری</a></h3>
+        <!-- توضیح مختصر -->
+        <p>اطلاعات بستانکاری</p>
+    </div>
+    <!-- پایان زیر بخش اطلاعات بستانکاری -->
+
+
+    <!-- شروع زیر بخش   کادکس اسکان -->
+    <div class="ma-quarter">
+        <!-- عکس -->
+        <img src="src/img/kadex.png" alt="Boss" style="width:45%" class="ma-circle ma-hover-opacity">
+        <!-- عنوان -->
+        <h3><a href="#" class="transition-link" style="text-align: center">کادکس اسکان</a></h3>
+        <!-- توضیح مختصر -->
+        <p>مشخصات اسکان</p>
+    </div>
+    <!-- پایان زیر بخش کادکس اسکان -->
+
+    <!--   شروع زیر بخش   هزینه ثبت نام-->
+    <div class="ma-quarter">
+        <!-- عکس -->
+        <img src="src/img/pardakhtHazine.png" alt="Boss" style="width:45%" class="ma-circle ma-hover-opacity">
+        <!-- عنوان -->
+        <h3><a href="#" class="transition-link">پرداخت هزینه ثبت نام</a></h3>
+        <!-- توضیح مختصر -->
+        <p>هزینه ها</p>
+    </div>
+    <!-- پایان زیر بخش هزینه ثبت نام  -->
+
+    <!--   شروع زیر بخش   پیش ثبت نام-->
+    <div class="ma-quarter">
+        <!-- عکس -->
+        <img src="src/img/bestankari.png" alt="Boss" style="width:45%" class="ma-circle ma-hover-opacity">
+        <!-- عنوان -->
+        <h3><a href="#" class="transition-link"> پیش ثبت نام</a></h3>
+        <!-- توضیح مختصر -->
+        <p>ثبت نام اولیه</p>
+    </div>
+    <!-- پایان زیر بخش پیش ثبت نام  -->
+
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- شروع بخش امور تغذیه -->
+<div style="text-align: center; margin-top: 30px">
+    <!-- عنوان -->
+    <h2><b>امور تغذیه</b></h2>
+    <!-- متن توضیحی -->
+    <p>در این بخش، اطلاعات مربوط به سامانه تغذیه قرار دارد.</p>
+</div>
+
+
+<!--  زیر بخش های تغذیه -->
+<div class="ma-row-padding ma-padding-64 ma-theme-l1" id="work">
+
+    <!-- شروع بخش اطلاعات اعتبارات -->
+    <div class="ma-quarter" dir="rtl">
+        <!-- کارت اطلاعات اعتبارات -->
+        <div class="ma-card ma-white">
+            <!-- تصویر -->
+            <img src="src/img/hesabkarbari.jpg" alt="Snow" style="width:100%">
+            <div class="ma-container" style="text-align: center; height: 250px;">
+                <!-- عنوان -->
+                <h3 style="color: #009688; font-weight: bold">امور اعتبارات</h3>
+                <!-- لینک‌های مرتبط با اعتبارات -->
+                <b><a href="creditIncrease.html" class="transition-link">افزایش اعتبار</a></b>
+                <b><a href="creditTransfer.html" class="transition-link">انتقال اعتبار</a></b>
+                <b><a href="#" class="transition-link">اعتبارات فرستاده شده</a></b>
+                <b><a href="#" class="transition-link">اعتبارات دریافتی</a></b>
+            </div>
+        </div>
+    </div>
+    <!-- پایان بخش اطلاعات اعتبارات -->
+
+    <!-- شروع بخش اطلاعات گزارشات -->
+    <div class="ma-quarter" dir="rtl">
+        <!-- کارت اطلاعات گزارشات -->
+        <div class="ma-card ma-white">
+            <!-- تصویر -->
+            <img src="src/img/taghzie1.jpg" alt="taghzie1" style="width:100%">
+            <div class="ma-container" style="text-align: center; height: 250px;">
+                <!-- عنوان -->
+                <h3 style="color: #009688; font-weight: bold">گزارشات</h3>
+                <!-- لینک‌های مرتبط با گزارشات -->
+                <b><a href="report.html" class="transition-link">گزارش عملکرد</a></b>
+                <b><a href="#" class="transition-link">گزارش اعتبار فرستاده شده</a></b>
+                <b><a href="#" class="transition-link">گزارش اعتبار دریافتی</a></b>
+                <b><a href="suggestions.html" class="transition-link">انتقادات و پیشنهادات</a></b>
+            </div>
+        </div>
+    </div>
+    <!-- پایان بخش گزارشات  -->
+
+
+    <!-- شروع بخش دریافت غذا -->
+    <div class="ma-quarter" dir="rtl">
+        <!-- کارت دریافت غذا -->
+        <div class="ma-card ma-white">
+            <!-- تصویر -->
+            <img src="src/img/taghzie2.jpg" alt="taghzie2" style="width:100%">
+            <div class="ma-container" style="text-align: center; height: 250px;">
+                <!-- عنوان -->
+                <h3 style="color: #009688; font-weight: bold">اقدام برای دریافت غذا</h3>
+                <!-- لینک‌های مرتبط با دریافت غذا -->
+                <b><a href="foodReservation.html" class="transition-link">رزرو غذا</a></b>
+                <b><a href="#" class="transition-link">خرید روز فروش غذا</a></b>
+                <b><a href="#" class="transition-link">فروش غذا</a></b>
+                <b><a href="#" class="transition-link">جابه جایی سفارش</a></b>
+            </div>
+        </div>
+    </div>
+    <!-- پایان بخش  دریافت غذا -->
+
+    <!-- شروع بخش  حساب کاربری -->
+    <div class="ma-quarter" dir="rtl">
+        <!-- کارت  حساب کاربری -->
+        <div class="ma-card ma-white">
+            <!-- تصویر -->
+            <img src="src/img/taghzie3.jpg" alt="taghzie3" style="width:100%">
+            <div class="ma-container" style="text-align: center; height: 250px;">
+                <!-- عنوان -->
+                <h3 style="color: #009688; font-weight: bold">حساب کاربری</h3>
+                <!-- لینک‌های مرتبط با حساب کاربری -->
+                <b><a href="#" class="transition-link">فراموشی کارت</a></b>
+                <b><a href="resetSecondPass.html" class="transition-link">تغییر رمز دوم</a></b>
+                <b><a href="#" class="transition-link">قفل نمودن کارت</a></b>
+                <b><a href="#" class="transition-link">اقدام برای کارت جدید</a></b>
+            </div>
+        </div>
+    </div>
+    <!-- پایان بخش  حساب کاربری -->
+</div>
+<!-- پایان بخش   امور تغذیه -->
+
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
+
+<!--  شروع بخش اطلاعات حساب کاربری -->
+<div class="ma-row-padding ma-center ma-padding-64" id="pricing">
+    <!--  عنوان بخش اطلاعات حساب کاربری-->
+    <!--    <h2>تنظیمات حساب کاربری</h2>-->
+    <h2>
+        <b>تنظیمات حساب کاربری</b>
+    </h2>
+    <!--  توضیحات بخش اطلاعات حساب کاربری-->
+    <p>در این بخش می توانید اطلاعات حساب کاربری دانشجویی خود را تغییر دهید. </p><br>
+
+    <!-- شروع بخش کارت اطلاعات بیشتر -->
+    <div class="ma-third ma-margin-bottom">
+        <ul class="ma-ul ma-border ma-hover-shadow">
+            <li class="ma-theme">
+                <p class="ma-xlarge">اطلاعات بیشتر</p>
+            </li>
+            <!-- شروع بخش گزینه های اطلاعات بیشتر -->
+            <li class="ma-padding-16"><b>اطلاعات خویشاوندی</b></li>
+            <li class="ma-padding-16"><b>توانمندی ها</b></li>
+            <li class="ma-padding-16"><b>علاقمندی ها</b></li>
+            <li class="ma-padding-16"><b>آدرس</b></li>
+            <li class="ma-padding-16">
+                <span class="ma-opacity">برای تغییر کلیک کنید</span>
+            </li>
+            <!-- پایان بخش گزینه های اطلاعات بیشتر -->
+            <li class="ma-theme-l5 ma-padding-24">
+                <!-- دکمه بخش گزینه های اطلاعات بیشتر -->
+                <button class="ma-button ma-teal ma-padding-large"><i class="fa fa-check"></i> کلیک کنید</button>
+            </li>
+        </ul>
+        <!-- پایان بخش کارت اطلاعات بیشتر -->
+    </div>
+    <!-- پایان بخش  اطلاعات بیشتر -->
+
+
+    <!-- شروع بخش کارت اطلاعات کاربری -->
+    <div class="ma-third ma-margin-bottom">
+        <!-- شروع بخش کارت اطلاعات کاربری -->
+        <ul class="ma-ul ma-border ma-hover-shadow">
+            <li class="ma-theme">
+                <p class="ma-xlarge">اطلاعات کاربری</p>
+            </li>
+            <!-- شروع بخش گزینه های اطلاعات کاربری -->
+            <li class="ma-padding-16"><b>تغییر رمز عبور</b></li>
+            <li class="ma-padding-16"><b>نمایش پروفایل</b></li>
+            <li class="ma-padding-16"><b>تغییر قالب نمایش</b></li>
+            <li class="ma-padding-16"><b>تغییر قالب</b></li>
+            <li class="ma-padding-16">
+                <span class="ma-opacity">برای تغییر کلیک کنید</span>
+            </li>
+            <!-- پایان بخش گزینه های اطلاعات کاربری -->
+            <li class="ma-theme-l5 ma-padding-24">
+                <button class="ma-button ma-teal ma-padding-large"><i class="fa fa-check"></i> کلیک کنید</button>
+            </li>
+        </ul>
+        <!-- پایان بخش کارت اطلاعات کاربری -->
+    </div>
+    <!-- پایان بخش  اطلاعات کاربری -->
+
+
+    <!-- شروع بخش کارت ارتباطات  -->
+    <div class="ma-third ma-margin-bottom">
+        <!-- شروع بخش کارت ارتباطات  -->
+        <ul class="ma-ul ma-border ma-hover-shadow">
+            <li class="ma-theme">
+                <p class="ma-xlarge">ارتباطات</p>
+            </li>
+            <!-- شروع بخش گزینه های ارتباطات  -->
+            <li class="ma-padding-16"><b>ارسال پیشنهاد</b></li>
+            <li class="ma-padding-16"><b>ارسال انتقاد</b></li>
+            <li class="ma-padding-16"><b>درخواست جلسه</b></li>
+            <li class="ma-padding-16"><b>درخواست هم اندیشی</b></li>
+            <li class="ma-padding-16">
+                <span class="ma-opacity">برای تغییر کلیک کنید</span>
+            </li>
+            <!-- پایان بخش گزینه های ارتباطات -->
+            <li class="ma-theme-l5 ma-padding-24">
+                <button class="ma-button ma-teal ma-padding-large"><i class="fa fa-check"></i> کلیک کنید</button>
+            </li>
+        </ul>
+        <!-- پایان بخش کارت  ارتباطات -->
+    </div>
+    <!-- پایان بخش  ارتباطات  -->
+</div>
+<!-- پایان بخش  حساب کاربری  -->
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
+<!-- بخش ارتباطات -->
+<!--about us section-->
+<div class="ma-container ma-padding-64 ma-theme-l5" id="contact" style="margin-top: -30px">
+    <div class="ma-row">
+        <div class="ma-col m5" dir="rtl">
+            <div class="ma-padding-16" style="margin-top: -50px;"><span class="ma-xlarge ma-border-teal ma-bottombar">تماس با ما</span>
+            </div>
+            <h3>آدرس:</h3>
+            <p>رشت بزرگراه خلیج فارس، کیلومتر ۵ جاده قزوین، مجتمع دانشگاه گیلان</p>
+            <p><i class="fa fa-map-marker ma-text-teal ma-xlarge"></i>&nbsp;&nbsp;رشت گیلان </p>
+            <p><i class="fa fa-phone ma-text-teal ma-xlarge"></i>&nbsp;&nbsp;01333690274-8</p>
+            <p><i class="fa fa-envelope-o ma-text-teal ma-xlarge"></i>&nbsp;&nbsp;pr@guilan.ac.ir</p>
+        </div>
+
+        <!--        شروع فرم-->
+        <div class="ma-col m7" style="margin-top: -50px">
+            <form class="ma-container ma-card-4 ma-padding-16 ma-white " target="_blank" style="height: 320px">
+                <div class="ma-section">
+                    <label class="custom">مشخصات</label>
+                    <input class="ma-input" type="text" name="Name" required
+                           placeholder="نام و نام خانوادگی خود را وارد کنید">
+                </div>
+                <div class="ma-section">
+                    <label class="custom">ایمیل</label>
+                    <input class="ma-input" type="email" name="Email" required
+                           placeholder="آدرس ایمیل خود را وارد کنید">
+                </div>
+                <div class="ma-section">
+                    <label class="custom">پیام</label>
+                    <input class="ma-input" type="text" name="Message" required placeholder="متن پیام خود را وارد کنید">
+                </div>
+                <!--پایان فرم-->
+                <!-- submit button -->
+                <button type="submit" class="ma-button ma-right ma-theme" style="margin-top: -12px">ارسال</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------- -->
+
+<!--footer image-->
+<img src="src/img/map.jpg" class="ma-image ma-greyscale-min" style="width:100%; margin-top: 20px">
+<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+
+<footer class="ma-container ma-padding-32 ma-theme-d1 ma-center">
+    <h4>ما را در شبکه های اجتماعی دانشگاه دنبال کنید</h4>
+    <!--    contact us section-->
+    <a class="ma-button ma-large ma-teal" href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+    <a class="ma-button ma-large ma-teal" href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+    <a class="ma-button ma-large ma-teal" href="#" title="Google +"><i class="fa fa-google-plus"></i></a>
+    <a class="ma-button ma-large ma-teal" href="#" title="Google +"><i class="fa fa-instagram"></i></a>
+
+    <a class="ma-button ma-large ma-teal ma-hide-small" href="javascript:void(0)" title="Linkedin"><i
+            class="fa fa-linkedin"></i></a>
+    <p>Powered by <a href="#" target="_blank">Mahtab Ashouri</a></p>
+
+    <div style="position:relative;bottom:100px;z-index:1;" class="ma-tooltip ma-right">
+        <span class="ma-text ma-padding ma-teal ma-hide-small">بازگشت به ابتدای صفحه</span>
+        <a class="ma-button ma-theme" href="#myPage"><span class="ma-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+    </div>
+</footer>
+
+</body>
+
+</html>
